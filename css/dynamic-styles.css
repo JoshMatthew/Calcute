@@ -1,0 +1,83 @@
+@import url('./static-styles.css');
+
+.switch-off {
+  position: relative;
+  overflow: hidden;
+  padding: 0.001rem 1.2rem;
+  background: var(--main-color);
+  box-shadow: 
+  1px 1px 3px var(--box-shadow-pos),
+  -1px -1px 3px var(--box-shadow-neg)
+  ;
+  border-radius: 50px 50px 50px 50px;
+  transition: 300ms background ease-out, 200ms box-shadow ease-out;
+  cursor: pointer;
+} 
+
+.switch-off::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: #666;
+  right: 53%;
+  bottom: 3px;
+  border-radius: 50%;
+  transition: 200ms left ease-out, 200ms right ease-out, 300ms background ease-out;
+  box-shadow: 
+  inset 1px 1px 3px var(--box-shadow-pos),
+  inset -1px -1px 3px var(--box-shadow-neg);
+}
+
+.switch-on::before {
+  left: 53%;
+  right: 3px;
+  background: #fff;
+  box-shadow: 
+  0 0 5px #fff;
+}
+
+.numbers-red {
+  color: var(--numpad-color-1);
+  /* text-shadow: 0 0 10px var(--numpad-color-1); */
+}
+.numbers-green {
+  color: var(--numpad-color-2);
+  /* text-shadow: 0 0 10px var(--numpad-color-2); */
+}
+.numbers-blue {
+  color: var(--numpad-color-3);
+  /* text-shadow: 0 0 10px var(--numpad-color-3); */
+}
+.numbers-yellow {
+  color: var(--numpad-color-5);
+  /* text-shadow: 0 0 10px var(--numpad-color-5); */
+}
+.numbers-pink {
+  color: var(--numpad-color-4);
+  /* text-shadow: 0 0 10px var(--numpad-color-4); */
+}
+.numbers-white {
+  color: var(--number-color);
+}
+
+
+.number-light-it {
+  text-shadow: 0 0 10px var(--number-shadow);
+}
+
+.operator-light-it {
+  text-shadow: 0 0 10px var(--operator-shadow);
+}
+
+.equal-light-it {
+  text-shadow: 0 0 18px var(--operator-equal-shadow); 
+}
+
+.clear-light-it {
+  text-shadow: 0 0 18px var(--operator-clear-shadow-hover); 
+}
+
+.number-light-animation {
+  animation: changeLight 6s infinite forwards;
+}
