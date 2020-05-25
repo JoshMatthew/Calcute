@@ -106,6 +106,12 @@ function changingLights() {
       number.classList.toggle('number-light-animation')
     }, Math.random() * (700 - 100) + 100);
   })
+
+  operators.forEach(operator => {
+    setTimeout(() => {
+      operator.classList.toggle('number-light-animation')
+    }, Math.random() * (700 - 100) + 100);
+  })
 }
 
 // turns on or off radio button
