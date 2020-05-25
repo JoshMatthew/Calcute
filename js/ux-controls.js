@@ -102,7 +102,9 @@ function otherLightSwitch() {
 // helper funtion for light animation
 function changingLights() {
   numbers.forEach(number => {
-    number.classList.toggle('number-light-animation')
+    setTimeout(() => {
+      number.classList.toggle('number-light-animation')
+    }, Math.random() * (700 - 100) + 100);
   })
 }
 
